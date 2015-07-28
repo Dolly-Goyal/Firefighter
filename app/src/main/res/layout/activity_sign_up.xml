@@ -1,10 +1,9 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_app"
-    tools:context=".MainActivity">
+    tools:context="com.app.firefighter.SignUpActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -43,30 +42,33 @@
             android:textColor="@color/text_color"
             android:background="@drawable/button_bg" />
     </LinearLayout>
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/linear"
-        android:id="@+id/relative"
-        android:layout_marginTop="8dp">
-
-        <FrameLayout
-            android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/fragment_student"/>
+            android:layout_height="match_parent"
+            android:id="@+id/relative"
+            android:layout_marginTop="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/newUser"
-            android:text="@string/new_user"
-            android:layout_below="@+id/fragment_student"
-            android:layout_alignRight="@+id/fragment_student"
-            android:layout_marginRight="46dp"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/facebook_tab"
-            android:layout_marginBottom="30dp"/>
+            <FrameLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_student1"/>
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/existUser"
+                android:text="@string/exist_user"
+                android:layout_below="@+id/fragment_student1"
+                android:layout_alignRight="@+id/fragment_student1"
+                android:layout_marginRight="46dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/facebook_tab"
+                android:layout_marginBottom="30dp"/>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

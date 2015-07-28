@@ -1,5 +1,27 @@
 <resources>
     <string name="app_name">Firefighter</string>
+    <string name="facebook_login">Facebook</string>
+    <string name="email_id">Email_id</string>
+    <string name="password">Password</string>
+    <string name="login">Log-In</string>
+    <string name="new_user">New User Click Here</string>
+    <string name="exist_user">Existing User</string>
+    <string name="name">Name</string>
+    <string name="college">College Name</string>
+    <string-array name="Location">
+        <item>Mumbai</item>
+        <item>Bangalore</item>
+        <item>Dehli</item>
+        <item>Hyderabaad</item>
+        <item>Ahemdaabad</item>
+        <item>Chennai</item>
+        <item>Pune</item>
+    </string-array>
+    <string name="select_loc">Select Location</string>
+    <string name="conform_password">Conform Password</string>
+    <string name="signIn">Sign-In</string>
+    <string name="company">Company Name</string>
+    <string name="title_activity_student_home">Firefighter</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

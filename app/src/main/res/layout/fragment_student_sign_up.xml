@@ -1,0 +1,109 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.firefighter.StudentSignUpFragment">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_search"
+        android:layout_gravity="center_horizontal|top"
+        android:visibility="invisible"
+        style="?android:attr/progressBarStyleLargeInverse"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/studentPic"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:hint="@string/name"
+        android:textSize="20sp"
+        android:id="@+id/nameStudent"
+        android:layout_below="@+id/studentPic"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/college"
+        android:textSize="20sp"
+        android:id="@+id/college"
+        android:layout_below="@+id/nameStudent"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/spinner"
+        android:entries="@array/Location"
+        android:prompt="@string/select_loc"
+        android:layout_below="@+id/college" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/email_id"
+        android:textSize="20sp"
+        android:ems="10"
+        android:id="@+id/email"
+        android:layout_below="@+id/spinner">
+        <requestFocus/>
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:hint="@string/password"
+        android:ems="10"
+        android:id="@+id/password"
+        android:layout_below="@+id/email" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:hint="@string/conform_password"
+        android:ems="10"
+        android:id="@+id/conform"
+        android:layout_below="@+id/password" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signIn"
+        android:id="@+id/signIn"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/text_color"
+        android:layout_below="@+id/conform"/>
+</RelativeLayout>

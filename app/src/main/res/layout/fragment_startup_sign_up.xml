@@ -1,0 +1,79 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.firefighter.StartupSIgnUpFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="150dp"
+        android:id="@+id/imgLogo"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:hint="@string/company"
+        android:textSize="20sp"
+        android:id="@+id/company"
+        android:layout_below="@+id/imgLogo"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/email_id"
+        android:textSize="20sp"
+        android:ems="10"
+        android:id="@+id/companyEmail"
+        android:layout_below="@+id/company">
+        <requestFocus/>
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:hint="@string/password"
+        android:ems="10"
+        android:id="@+id/companyPassword"
+        android:layout_below="@+id/companyEmail" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:hint="@string/conform_password"
+        android:ems="10"
+        android:id="@+id/conform"
+        android:layout_below="@+id/companyPassword" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signIn"
+        android:id="@+id/companySignIn"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/text_color"
+        android:layout_below="@+id/conform"/>
+</RelativeLayout>

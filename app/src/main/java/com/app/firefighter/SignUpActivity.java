@@ -11,62 +11,61 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class MainActivity extends FragmentActivity {
-    Fragment fragment;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
+public class SignUpActivity extends FragmentActivity {
+    Fragment fr;
+    FragmentManager fm;
+    FragmentTransaction ft;
     Button student,startup;
-    TextView newUser;
+    TextView existUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sign_up);
 
         student = (Button)findViewById(R.id.student);
         startup = (Button)findViewById(R.id.startup);
-        newUser = (TextView)findViewById(R.id.newUser);
+        existUser = (TextView)findViewById(R.id.existUser);
 
         // Call fragment
-        fragment = new StudentLoginFragment();
-        fragmentManager =  getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragment_student, fragment);
-        fragmentTransaction.commit();
+        fr = new StudentSignUpFragment();
+        fm =  getSupportFragmentManager();
+        ft = fm.beginTransaction();
+        ft.add(R.id.fragment_student1,fr);
+        ft.commit();
 
         //Button click event fragment replace to another fragment
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragment = new StudentLoginFragment();
-                navigationFragment();
+                fr = new StudentSignUpFragment();
+                navigationFragment1();
             }
         });
         startup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragment = new StartupLoginFragment();
-                navigationFragment();
+                fr = new StartupSIgnUpFragment();
+                navigationFragment1();
             }
         });
 
         //Redirect to another activity on text click event
-        newUser.setOnClickListener(new View.OnClickListener() {
+        existUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,SignUpActivity.class);
+                Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
     }
-
     // Asynchronous navigation fragment for remove previous fragment and replace with new fragment
-    public void navigationFragment() {
-        fragmentManager = getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.remove(fragment);
-        fragmentTransaction.replace(R.id.fragment_student, fragment);
-        fragmentTransaction.commit();
+    public void navigationFragment1() {
+        fm = getSupportFragmentManager();
+        ft = fm.beginTransaction();
+        ft.remove(fr);
+        ft.replace(R.id.fragment_student1, fr);
+        ft.commit();
     }
 }

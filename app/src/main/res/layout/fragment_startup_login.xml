@@ -1,0 +1,45 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.firefighter.StartupLoginFragment">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_id"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:id="@+id/startupEmail" >
+        <requestFocus/>
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:hint="@string/password"
+        android:layout_below="@+id/startupEmail"
+        android:ems="10"
+        android:id="@+id/startupPassword" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="46dp"
+        android:layout_marginRight="46dp"
+        android:text="@string/login"
+        android:id="@+id/startupLogin"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/startupPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/text_color" />
+</RelativeLayout>

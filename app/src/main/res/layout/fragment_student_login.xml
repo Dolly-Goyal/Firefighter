@@ -1,0 +1,58 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.firefighter.StudentLoginFragment">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/facebook_login"
+        android:background="@color/facebook_tab"
+        android:textColor="@color/text_color"
+        android:id="@+id/facebook_login"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_id"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:layout_below="@+id/facebook_login"
+        android:id="@+id/studentEmail" >
+        <requestFocus/>
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:hint="@string/password"
+        android:layout_below="@+id/studentEmail"
+        android:ems="10"
+        android:id="@+id/studentPassword" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="46dp"
+        android:layout_marginRight="46dp"
+        android:text="@string/login"
+        android:id="@+id/studentLogin"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/studentPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/text_color" />
+
+</RelativeLayout>
