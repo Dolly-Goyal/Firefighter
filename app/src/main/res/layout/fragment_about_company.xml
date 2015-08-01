@@ -1,0 +1,121 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.firefighter.AboutCompanyFragment">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/logo_img_about"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/about_company_name"
+            android:layout_marginRight="16dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/logo_img_about"
+            android:text="@string/company"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/about_company_name"
+            android:layout_below="@+id/logo_img_about"
+            android:textSize="18sp"
+            android:id="@+id/company_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="@string/mission"
+            android:layout_below="@+id/company_name"
+            android:id="@+id/about_mission"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/about_mission"
+            android:layout_below="@+id/company_name"
+            android:textSize="18sp"
+            android:id="@+id/mission_about"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="@string/role"
+            android:id="@+id/about_role"
+            android:layout_below="@id/mission_about"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/role_about"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/about_role"
+            android:layout_below="@+id/mission_about"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skill"
+            android:layout_marginRight="16dp"
+            android:id="@+id/about_skill"
+            android:layout_below="@id/role_about"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/role_about"
+            android:layout_toRightOf="@+id/about_skill"
+            android:textSize="18sp"
+            android:id="@+id/skill_about"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:layout_marginRight="16dp"
+            android:id="@+id/about_location"
+            android:layout_below="@id/skill_about"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/about_location"
+            android:layout_below="@+id/skill_about"
+            android:id="@+id/location_about"
+            android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_below="@+id/location_about">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="45"
+                android:id="@+id/btn_apply"
+                android:text="Apply"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="45"
+                android:id="@+id/btn_reject"
+                android:text="Reject"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+

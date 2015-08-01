@@ -62,7 +62,7 @@
         android:textSize="20sp"
         android:hint="@string/conform_password"
         android:ems="10"
-        android:id="@+id/conform"
+        android:id="@+id/conformCompany"
         android:layout_below="@+id/companyPassword" />
 
     <Button
@@ -75,5 +75,5 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_button"
         android:textColor="@color/text_color"
-        android:layout_below="@+id/conform"/>
+        android:layout_below="@+id/conformCompany"/>
 </RelativeLayout>

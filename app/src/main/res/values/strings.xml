@@ -17,11 +17,24 @@
         <item>Chennai</item>
         <item>Pune</item>
     </string-array>
+    <string-array name="validity">
+        <item>30 days</item>
+        <item>15 days</item>
+        <item>10 days</item>
+        <item>7 days</item>
+        <item>1 day</item>
+    </string-array>
     <string name="select_loc">Select Location</string>
     <string name="conform_password">Conform Password</string>
     <string name="signIn">Sign-In</string>
     <string name="company">Company Name</string>
-    <string name="title_activity_student_home">Firefighter</string>
+    <string name="submit">Submit Your Post</string>
+    <string name="openning">Your current opening</string>
+    <string name="textS">Here some existing assigment for you</string>
+    <string name="mission">Mission</string>
+    <string name="skill">Skill</string>
+    <string name="role">Role</string>
+    <string name="title_activity_edit_profile">EditProfileActivity</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

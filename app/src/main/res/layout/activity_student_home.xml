@@ -3,5 +3,15 @@
     android:layout_height="match_parent"
     tools:context="com.app.firefighter.StudentHomeActivity">
 
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar">
+    </include>
 
+    <FrameLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/company_post"
+        android:layout_below="@+id/app_bar"/>
 </RelativeLayout>

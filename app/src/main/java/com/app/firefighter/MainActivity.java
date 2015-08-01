@@ -12,48 +12,64 @@ import android.widget.TextView;
 
 
 public class MainActivity extends FragmentActivity {
+
+    //Declare fragment
     Fragment fragment;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+
+    //Declare variable
     Button student,startup;
     TextView newUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Get the view from main.xml
         setContentView(R.layout.activity_main);
 
+        //Locate button in Main.xml
         student = (Button)findViewById(R.id.student);
         startup = (Button)findViewById(R.id.startup);
+
+        //Locate TextView in main.xml
         newUser = (TextView)findViewById(R.id.newUser);
 
-        // Call fragment
+        // Call default fragment
         fragment = new StudentLoginFragment();
         fragmentManager =  getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
+        //add default fragment
         fragmentTransaction.add(R.id.fragment_student, fragment);
         fragmentTransaction.commit();
 
-        //Button click event fragment replace to another fragment
+        //student button click Listner
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Define fragment
                 fragment = new StudentLoginFragment();
-                navigationFragment();
-            }
-        });
-        startup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fragment = new StartupLoginFragment();
+                //call navigationFragment method
                 navigationFragment();
             }
         });
 
-        //Redirect to another activity on text click event
+        //startup button click listner
+        startup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Define navigationFragment
+                fragment = new StartupLoginFragment();
+                //call navigationFragment method
+                navigationFragment();
+            }
+        });
+
+        //newUser TextView click listner
         newUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //send signUpActivity for new user
                 Intent intent = new Intent(MainActivity.this,SignUpActivity.class);
                 startActivity(intent);
                 finish();
@@ -65,7 +81,9 @@ public class MainActivity extends FragmentActivity {
     public void navigationFragment() {
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
+        //remove previous fragment
         fragmentTransaction.remove(fragment);
+        //replace with new fragment
         fragmentTransaction.replace(R.id.fragment_student, fragment);
         fragmentTransaction.commit();
     }

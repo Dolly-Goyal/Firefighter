@@ -6,4 +6,5 @@
     <color name="text_color">#FFFFFF</color>
     <color name="btn_default">#B71C1C</color>
     <color name="on_click">#E53935</color>
+    <color name="text_view">#000000</color>
 </resources>

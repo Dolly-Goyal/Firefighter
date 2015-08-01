@@ -1,0 +1,167 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.app.firefighter.JobPostActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:layout_marginTop="8dp"
+            android:textSize="25sp"
+            android:id="@+id/n"
+            android:textColor="@color/text_view"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="6dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="16dp"
+            android:hint="Person Name"
+            android:textSize="20sp"
+            android:id="@+id/name"
+            android:layout_toRightOf="@+id/n"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mission"
+            android:layout_marginTop="8dp"
+            android:textSize="25sp"
+            android:id="@+id/m"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="6dp"
+            android:textColor="@color/text_view"
+            android:layout_below="@id/name"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="16dp"
+            android:hint="Company Mission"
+            android:textSize="20sp"
+            android:id="@+id/mission"
+            android:layout_below="@+id/name"
+            android:layout_toRightOf="@+id/m"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Role"
+            android:layout_marginTop="8dp"
+            android:id="@+id/r"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="6dp"
+            android:textColor="@color/text_view"
+            android:textSize="25sp"
+            android:layout_below="@+id/mission"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/mission"
+            android:hint="Role"
+            android:textSize="20sp"
+            android:id="@+id/role"
+            android:layout_toRightOf="@+id/r"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skill"
+            android:layout_marginTop="8dp"
+            android:id="@+id/s"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="6dp"
+            android:textColor="@color/text_view"
+            android:textSize="25sp"
+            android:layout_below="@+id/role"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/role"
+            android:hint="Skill"
+            android:textSize="20sp"
+            android:id="@+id/skill"
+            android:layout_toRightOf="@+id/r"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:layout_marginTop="8dp"
+            android:id="@+id/l"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="6dp"
+            android:textColor="@color/text_view"
+            android:textSize="25sp"
+            android:layout_below="@+id/skill"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/skill"
+            android:hint="Location"
+            android:textSize="20sp"
+            android:id="@+id/location"
+            android:layout_toRightOf="@+id/l"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/validity"
+            android:layout_below="@+id/location"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/spinner1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/spinner1"
+            android:textSize="20sp"
+            android:textColor="@color/text_view"
+            android:layout_marginTop="8dp"
+            android:id="@+id/v"
+            android:text="No. of vacancy"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@+id/spinner1"
+            android:hint="vacancy"
+            android:textSize="20sp"
+            android:id="@+id/vacancy"
+            android:layout_toRightOf="@+id/v"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:layout_below="@+id/vacancy"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/submit"
+            android:layout_marginTop="8dp"
+            android:text="@string/submit"
+            android:textColor="@color/text_color"/>
+    </RelativeLayout>
+</ScrollView>
